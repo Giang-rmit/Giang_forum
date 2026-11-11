@@ -26,6 +26,12 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: var(--font);
+}
+
+/* Use the same typeface for all page text and generated content. */
+*, *::before, *::after {
+  font-family: inherit;
 }
 
 body {
@@ -39,7 +45,7 @@ a {
   color: inherit;
 }
 
-button, input, select {
+button, input, select, textarea {
   font: inherit;
 }
 
@@ -2264,7 +2270,7 @@ button, input, select {
   margin-top: 24px;
 }
 
-/* Yellow-and-white EduVibe logo with a transparent background. */
+/* Yellow-and-white EduVibe logo. */
 
 .logo .brand-logo {
   display: block;

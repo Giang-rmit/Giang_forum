@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduVibe | Learning Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login-signup-popup.css">
+    <link rel="stylesheet" href="../css/placeholder.css">
+  </head>
+  <body>
+    <!--CSS-only controls-->
+    <input type="checkbox" id="menu-toggle" aria-label="Navigation menu">
+    <input type="checkbox" id="search-toggle" aria-label="Search panel">
+    <input type="checkbox" id="filter-toggle" aria-label="Discussion filters">
+    <!--MOBILE SIDEBAR-->
+    <aside class="mobile-menu">
+      <div class="mobile-profile">
+        <div class="guest-icon">
+          EV
+        </div>
+        <p>Welcome to EduVibe</p>
+      </div>
+      <nav class="mobile-links">
+        <a href="MAIN_FORUM_PAGE.html">Home</a>
+        <a href="about.html">About</a>
+        <details>
+          <summary>Courses <span aria-hidden="true">▾</span></summary>
+          <div class="mobile-topic-list">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </details>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </nav>
+      <div class="guest-buttons">
+        <button type="button" popovertarget="auth-signup" class="sidebar-signup">Sign up</button>
+        <button type="button" popovertarget="auth-login" class="sidebar-login">Log in</button>
+      </div>
+    </aside>
+    <label for="menu-toggle" class="menu-overlay" aria-label="Close menu"></label>
+
+
+
+
+
+
+    <!--NAVBAR-->
+    <nav class="navbar">
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+      <a href="MAIN_FORUM_PAGE.html" class="logo" aria-label="EduVibe homepage"><img class="brand-logo" src="../images/eduvibe-logo.svg" alt="EduVibe"></a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <button class="dropdown-title" type="button"> Courses <span>▾</span></button>
+          <div class="dropdown-content">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </div>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </div>
+      <div class="desktop-actions guest-actions">
+        <label for="search-toggle" class="nav-icon search-trigger" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+        <button type="button" popovertarget="auth-login" class="login-button">Log in</button>
+        <button type="button" popovertarget="auth-signup" class="signup-button">Sign up</button>
+      </div>
+      <!--Mobile actions-->
+      <div class="mobile-actions">
+        <label for="search-toggle" class="nav-icon" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    <!--FOOTER-->
+    <footer class="site-footer">
+      <section class="footer-column">
+        <h2>EduVibe</h2>
+        <a href="about.html">About</a>
+        <span class="placeholder-text">Courses</span>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </section>
+      <section class="footer-column">
+        <h2>Topics</h2>
+        <span class="placeholder-text">AI &amp; Machine Learning</span>
+        <span class="placeholder-text">Cybersecurity</span>
+        <span class="placeholder-text">Web Development</span>
+        <span class="placeholder-text">Data Science</span>
+        <span class="placeholder-text">Game Development</span>
+        <span class="placeholder-text">Programming &amp; Software Development</span>
+        <span class="placeholder-text">Networking</span>
+        <span class="placeholder-text">Internet of Things (IoT)</span>
+      </section>
+      <section class="footer-column">
+        <h2>More</h2>
+        <a href="help.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="cookies.html">Cookie settings</a>
+        <a href="accessibility.html">Accessibility statement</a>
+      </section>
+    </footer>

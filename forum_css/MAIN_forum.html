@@ -102,57 +102,220 @@
           </div>
         </div>
 
-         
+        </nav>
+    <!--NAV SEARCH-->
+    <form class="search-panel" action="MAIN_FORUM_PAGE.html" method="get">
+      <div class="wide-search-box">
+        <input type="search" name="search" placeholder="What do you want to learn today?">
+        <button type="submit" aria-label="Search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </button>
+      </div>
+    </form>
+    <main class="forum-page">
+      <!--LEARNING HUB BANNER-->
+      <section class="forum-hero">
+        <div class="hero-content">
+          <span class="community-tag">EduVibe Community</span>
+          <h1>Learning Hub</h1>
+          <p> Ask questions, share knowledge, and connect with other learners. </p>
+        </div>
+        <div class="hero-image">
+          <img src="../images/learning-hub-students.jpg" alt="Students learning together">
+        </div>
+      </section>
+      <!--DISCUSSION TABS-->
+      <nav class="forum-tabs" aria-label="Forum navigation">
+        <a href="" class="active-tab">All discussions</a>
+        <a href="user_own_posts.html">My Posts</a>
+        <a href="user_replies.html">My Replies</a>
+        <a href="saved.html">Saved</a>
+      </nav>
+      <!--DESKTOP: Search left / Create Discussion right-->
+      <!--MOBILE: Create first, then Search and Filter-->
+      <section class="forum-tools">
+        <a href="create_form.html" class="create-button"> <span>+</span> Create Discussion </a>
+        <!--Press Enter to submit-->
+        <form class="forum-search" action="MAIN_FORUM_PAGE.html" method="get">
+          <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg>
+          <input type="search" name="search" placeholder="Search by title or content..." aria-label="Search discussions">
+        </form>
+        <!--Mobile only-->
+        <label for="filter-toggle" class="filter-trigger" aria-label="Open filters"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M3 4h18l-7 8v7l-4 2v-9z"></path> </svg> </label>
+      </section>
+      <div class="search-filter-tags" aria-label="Filter tags">
+        <label class="search-filter-tag"><span>All Topics</span><input type="checkbox" aria-label="Remove All Topics tag"><span class="filter-tag-close" aria-hidden="true">×</span></label>
+        <label class="search-filter-tag"><span>All Courses</span><input type="checkbox" aria-label="Remove All Courses tag"><span class="filter-tag-close" aria-hidden="true">×</span></label>
+      </div>
+      <!--DESKTOP FILTER DROPDOWNS-->
+      <section class="desktop-filters">
+        <label class="filter-box">
+          <span class="filter-prefix">Topic:</span>
+          <select class="topic-select" aria-label="Filter discussions by topic">
+            <option value="all">All Topics</option>
+            <option value="ai">AI &amp; Machine Learning</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="web">Web Development</option>
+            <option value="data">Data Science</option>
+            <option value="game">Game Development</option>
+            <option value="programming">Programming &amp; Software Development</option>
+            <option value="networking">Networking</option>
+            <option value="iot">Internet of Things (IoT)</option>
+          </select>
+        </label>
+        <label class="filter-box">
+          <span class="filter-prefix">Course:</span>
+          <select aria-label="Filter discussions by course">
+            <option value="all">All Courses</option>
+            <option value="none">No specific course</option>
+            <option value="html-css">Introduction to HTML &amp; CSS</option>
+            <option value="python">Python Programming</option>
+            <option value="cybersecurity">Cybersecurity Fundamentals</option>
+            <option value="data">Data Analytics Essentials</option>
+          </select>
+        </label>
+        <label class="filter-box">
+          <span class="filter-prefix">Sort by:</span>
+          <select aria-label="Sort discussions">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+            <option value="az">Title (A-Z)</option>
+            <option value="za">Title (Z-A)</option>
+          </select>
+        </label>
+      </section>
+      <p class="results-heading"><span id="results-count">3 results</span> <svg class="results-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M4 13l8 8 8-8"></path></svg></p>
+      <!--DISCUSSION POSTS-->
+      <section class="discussion-list">
+        <article class="discussion-card">
+          <div class="post-image code-image">
+            &lt;
+            /
+            &gt;
+          </div>
+          <div class="post-content">
+            <div class="post-top-row">
+              <a href="discussion.html" class="post-title">How does CSS Flexbox work?</a>
+              <label class="bookmark-button"><input class="bookmark-toggle" type="checkbox" aria-label="Save discussion 1"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M6 3.5h12v17l-6-4-6 4z"></path> </svg> </label>
+            </div>
+            <div class="post-tags">
+              <span class="topic-chip">Programming</span>
+              <span class="topic-chip">HTML &amp; CSS</span>
+            </div>
+            <p class="post-preview"> I'm trying to center a div using Flexbox, but it isn't working as expected. Can someone help me understand what I am missing? </p>
+            <div class="post-footer">
+              <div class="author-details">
+                <span class="account-avatar" aria-hidden="true"><svg viewBox="0 0 32 32"><path fill="#29365a" d="M8 18V12a8 8 0 0 1 16 0v6l-3 5H11Z"></path><circle fill="#f1b59d" cx="16" cy="13" r="6"></circle><path fill="#29365a" d="M10 11q0-9 10-5l3 7-6-5-3 4Z"></path><path fill="#d96883" d="M5 32v-5q0-7 11-7t11 7v5Z"></path><path fill="#f1b59d" d="M13 18h6v5l-3 3-3-3Z"></path></svg></span>
+                <span>Giang Le</span>
+                <span class="dot">•</span>
+                <span>Nov 2, 2026, 10:24am</span>
+              </div>
+              <div class="post-stats">
+                <span class="heart-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.4a5.5 5.5 0 0 0-.1-7.8z"></path> </svg> 70 </span>
+                <span class="comment-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.2 16.2A9 9 0 1 0 16.2 20.2L22 22l-1.8-5.8Z"></path> </svg> 15 </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="discussion-card">
+          <div class="post-image security-image">
+            ⌾
+          </div>
+          <div class="post-content">
+            <div class="post-top-row">
+              <a href="firewall_discussion.html" class="post-title"> What is the difference between a firewall and DMZ? </a>
+              <label class="bookmark-button"><input class="bookmark-toggle" type="checkbox" aria-label="Save discussion 2"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M6 3.5h12v17l-6-4-6 4z"></path> </svg> </label>
+            </div>
+            <div class="post-tags">
+              <span class="topic-chip">Cybersecurity</span>
+              <span class="topic-chip">Networking</span>
+            </div>
+            <p class="post-preview"> I am confused between the functions of these two security concepts. </p>
+            <div class="post-footer">
+              <div class="author-details">
+                <span class="avatar avatar-blue">DM</span>
+                <span>David Hernandez</span>
+                <span class="dot">•</span>
+                <span>Nov 1, 2026, 9:00am</span>
+              </div>
+              <div class="post-stats">
+                <span class="heart-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.4a5.5 5.5 0 0 0-.1-7.8z"></path> </svg> 55 </span>
+                <span class="comment-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.2 16.2A9 9 0 1 0 16.2 20.2L22 22l-1.8-5.8Z"></path> </svg> 20 </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="discussion-card">
+          <div class="post-image data-image">
+            ▥
+          </div>
+          <div class="post-content">
+            <div class="post-top-row">
+              <span class="placeholder-text post-title"> Which chart is best for comparing monthly data? </span>
+              <label class="bookmark-button"><input class="bookmark-toggle" type="checkbox" checked aria-label="Save discussion 3"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M6 3.5h12v17l-6-4-6 4z"></path> </svg> </label>
+            </div>
+            <div class="post-tags">
+              <span class="topic-chip">Data Science</span>
+              <span class="topic-chip">Python</span>
+            </div>
+            <p class="post-preview"> Should I use a line chart or a bar chart to compare website traffic across months? </p>
+            <div class="post-footer">
+              <div class="author-details">
+                <span class="avatar avatar-green">LT</span>
+                <span>Linh Tran</span>
+                <span class="dot">•</span>
+                <span>Oct 30, 2026, 3:15pm</span>
+              </div>
+              <div class="post-stats">
+                <span class="heart-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.9-8.4a5.5 5.5 0 0 0-.1-7.8z"></path> </svg> 24 </span>
+                <span class="comment-stat"> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M20.2 16.2A9 9 0 1 0 16.2 20.2L22 22l-1.8-5.8Z"></path> </svg> 8 </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!--MOBILE FILTER PANEL-->
+    <label for="filter-toggle" class="filter-overlay"></label>
+    <aside class="mobile-filter-sheet">
+      <div class="sheet-handle">
+      </div>
+      <h2> <svg viewBox="0 0 24 24" aria-hidden="true"> <path d="M3 4h18l-7 8v7l-4 2v-9z"></path> </svg> Filters </h2>
+      <label>
+        Topic
+        <select>
+          <option>All Topics</option>
+          <option value="ai">AI &amp; Machine Learning</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="web">Web Development</option>
+          <option value="data">Data Science</option>
+          <option value="game">Game Development</option>
+          <option value="programming">Programming &amp; Software Development</option>
+          <option value="networking">Networking</option>
+          <option value="iot">Internet of Things (IoT)</option>
+        </select>
+      </label>
+      <label>
+        Course
+        <select>
+          <option>All Courses</option>
+          <option>No specific course</option>
+          <option>Introduction to HTML &amp; CSS</option>
+          <option>Python Programming</option>
+          <option>Cybersecurity Fundamentals</option>
+        </select>
+      </label>
+      <label>
+        Show / Sort
+        <select>
+          <option>Latest</option>
+          <option>Oldest</option>
+          <option>Title (A-Z)</option>
+          <option>Title (Z-A)</option>
+        </select>
+      </label>
+      <label for="filter-toggle" class="apply-filters">Apply Filters</label>
+      <label for="filter-toggle" class="clear-filters">Clear All</label>
+    </aside>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     <!--FOOTER-->
     <footer class="site-footer">
       <section class="footer-column">
@@ -183,3 +346,82 @@
         <a href="accessibility.html">Accessibility statement</a>
       </section>
     </footer>
+     <div id="auth-login" class="auth-popup login-page" popover aria-label="Log in to EduVibe">
+      <button class="auth-close" type="button" popovertarget="auth-login" popovertargetaction="hide" aria-label="Close login">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-login-signup-heading">
+        <header class="signup-intro">
+          <h2 class="signup-title" id="popup-login-signup-heading">Welcome back</h2>
+          <p class="login-subtitle">Log in to your training</p>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+          <div class="signup-field">
+            <label for="popup-login-email">Email address</label>
+            <input id="popup-login-email" type="email" autocomplete="email" placeholder="Enter your email" required>
+          </div>
+          <div class="signup-field">
+            <div class="login-password-heading">
+              <label for="popup-login-password">Password</label>
+              <a class="forgot-password-link" href="forgot_password.html">Forgot password?</a>
+            </div>
+            <div class="password-field">
+              <input id="popup-login-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+          <button class="create-account login-action" type="submit" formnovalidate>Log In</button>
+          <p class="account-switch login-account-switch">New to EduVibe? <button type="button" popovertarget="auth-signup">Create an account</button></p>
+        </form>
+      </section>
+    </div>
+    <div id="auth-signup" class="auth-popup" popover aria-label="Create your EduVibe account">
+      <button class="auth-close" type="button" popovertarget="auth-signup" popovertargetaction="hide" aria-label="Close signup">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-signup-signup-heading">
+        <header class="signup-intro">
+          <div class="signup-brand-header">
+            <h2 class="signup-title" id="popup-signup-signup-heading">Create Your Account</h2>
+            <p class="signup-brand-slogan">Build skills. Shape your future.</p>
+          </div>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+          <div class="signup-field">
+            <label for="popup-signup-full-name">Full name <span class="signup-optional">(optional)</span></label>
+            <input id="popup-signup-full-name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your full name">
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-username">Username</label>
+            <input id="popup-signup-username" type="text" autocomplete="username" maxlength="30" placeholder="Choose a username" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-email">Email address</label>
+            <input id="popup-signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-password">Password</label>
+            <div class="password-field">
+              <input id="popup-signup-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="popup-signup-password-help" placeholder="Create a password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+            <small id="popup-signup-password-help">Use at least 8 characters.</small>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-confirm-password">Confirm password</label>
+            <div class="password-field">
+              <input id="popup-signup-confirm-password" type="password" autocomplete="new-password" minlength="8" required placeholder="Enter your password again">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <div class="signup-agreement">
+            <input id="popup-signup-agree-terms" type="checkbox" required>
+            <label for="popup-signup-agree-terms">I agree to EduVibe’s <a href="terms.html">Terms of Service</a> and acknowledge the <a href="privacy.html">Privacy Policy</a>.</label>
+          </div>
+          <button class="create-account" type="submit">Create Account</button>
+          <p class="account-switch">Already have an account? <button type="button" popovertarget="auth-login">Log in</button></p>
+        </form>
+      </section>
+    </div>
+    <p class="visually-hidden" id="auth-preview-note">Static account preview: no account is created and credentials are not sent or stored.</p>
+  </body>
+</html>

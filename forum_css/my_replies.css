@@ -1,0 +1,82 @@
+/* My Replies builds on the shared forum and discussion styles. */
+.my-replies-page .discussion-list {
+  margin-top: 10px;
+}
+
+.my-replies-page .discussion-card {
+  padding: 20px;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 20px;
+  border: 1px solid var(--navy);
+  border-radius: 8px;
+}
+
+.my-replies-page .post-image {
+  min-height: 135px;
+  font-size: 39px;
+}
+
+.my-replies-page .post-title {
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.my-replies-page .post-title:hover {
+  text-decoration: underline;
+}
+
+.my-replies-page .post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.my-replies-page .post-tags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.my-replies-page .topic-chip {
+  margin: 0;
+}
+
+.my-replies-page .post-preview {
+  margin: 0;
+}
+
+.my-replies-page .compact-user-reply {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  padding: 12px 14px;
+  border: 1px solid #c7d4ed;
+  background: #f7faff;
+  border-radius: 6px;
+}
+
+.my-replies-page .compact-reply-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 800px) {
+  .my-replies-page .discussion-card {
+    padding: 12px;
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .my-replies-page .post-image {
+    min-height: 106px;
+    font-size: 24px;
+  }
+
+  .my-replies-page .compact-user-reply {
+    padding: 12px 14px;
+  }
+}

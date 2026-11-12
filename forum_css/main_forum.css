@@ -234,17 +234,24 @@ button, input, select, textarea {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
 }
 
-.language-options a {
+.language-options a, .language-options > .placeholder-text {
+  display: block;
   padding: 9px;
   border-radius: 5px;
-  color: var(--navy);
+  color: #000;
   font-size: 13px;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .language-options a:hover {
   background: var(--light-blue);
   color: var(--navy);
+}
+
+.language-options > .placeholder-text:hover {
+  background: var(--selection-yellow);
+  color: #000;
 }
 
 .search-trigger::after {
@@ -444,7 +451,7 @@ button, input, select, textarea {
   border-bottom: 2px solid #c7d0df;
 }
 
-.forum-tabs a {
+.forum-tabs a, .forum-tabs > .placeholder-text {
   padding: 16px 8px;
   border-bottom: 4px solid transparent;
   color: var(--navy);
@@ -455,7 +462,7 @@ button, input, select, textarea {
   transition: 0.2s ease;
 }
 
-.forum-tabs a:hover {
+.forum-tabs a:hover, .forum-tabs > .placeholder-text:hover {
   background: var(--light-blue);
   color: var(--navy);
 }
@@ -624,6 +631,32 @@ button, input, select, textarea {
 
 .post-content {
   min-width: 0;
+}
+
+.my-posts-page .post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.my-posts-page .post-title {
+  margin-top: 0;
+}
+
+.my-posts-page .post-tags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.my-posts-page .topic-chip,
+.my-posts-page .post-preview {
+  margin: 0;
+}
+
+.my-posts-page .post-preview {
+  line-height: 1.6;
 }
 
 .post-top-row {
@@ -804,6 +837,73 @@ button, input, select, textarea {
   outline: 2px solid var(--yellow);
   outline-offset: 4px;
   border-radius: 2px;
+}
+
+/* Give Cancel actions a consistent secondary button appearance. */
+.delete-dialog-actions button[popovertargetaction="hide"],
+.comment-dialog .comment-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 20px;
+  border: 1px solid #9faed0;
+  border-radius: 6px;
+  background: white;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-dialog-actions button[popovertargetaction="hide"]:hover,
+.comment-dialog .comment-cancel:hover {
+  background: var(--light-blue);
+}
+
+body .delete-dialog-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body .delete-dialog-actions button[popovertargetaction="hide"] {
+  background: #f3f3f6;
+  color: var(--navy);
+}
+
+body .delete-dialog-actions button[popovertargetaction="hide"]:hover {
+  background: #e6eaf2;
+}
+
+body .delete-dialog-actions button.delete-confirm-action {
+  background: #df202b;
+  color: white;
+  box-shadow: 0 3px 8px rgb(110 18 25 / 22%);
+}
+
+body .delete-dialog-actions button.delete-confirm-action:hover {
+  background: #be1721;
+}
+
+body .delete-dialog-actions .delete-confirm-action svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ---------------- MOBILE ---------------- */
@@ -1035,7 +1135,7 @@ button, input, select, textarea {
     margin-top: 14px;
   }
 
-  .forum-tabs a {
+  .forum-tabs a, .forum-tabs > .placeholder-text {
     padding: 11px 2px;
     border-bottom-width: 3px;
     font-size: 11px;
@@ -2318,12 +2418,87 @@ body button:focus-visible, body input:is([type="submit"], [type="button"], [type
 
 /* More rounded forum tab highlights. */
 
-.forum-tabs a, .forum-tabs .active-tab {
-  border-radius: 20px 20px 0 0;
+.forum-tabs a, .forum-tabs > .placeholder-text, .forum-tabs .active-tab {
+  border-radius: 12px;
 }
 
 /* Give discussion cards a little more separation. */
 
 .discussion-list {
   gap: 30px;
+}
+
+/* Keep discussion card rows evenly spaced. */
+.discussion-card .post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.discussion-card .post-title {
+  margin-top: 0;
+}
+
+.discussion-card .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+.discussion-card .topic-chip,
+.discussion-card .post-preview {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .forum-page .discussion-card {
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .forum-page .discussion-card .post-image {
+    width: 132px;
+    height: 140px;
+    min-height: 0;
+    align-self: start;
+    font-size: 39px;
+  }
+
+  .forum-page .discussion-card .bookmark-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .forum-page .discussion-card .post-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  .forum-page .discussion-card .post-title {
+    font-size: 14px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .forum-page .discussion-card .post-preview {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .forum-page .discussion-card .topic-chip {
+    font-size: 9px;
+  }
+
+  .forum-page .discussion-card .post-footer {
+    font-size: 10px;
+  }
 }

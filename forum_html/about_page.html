@@ -8,12 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../forum_css/main_forum.css">
-    <link rel="stylesheet" href="../css/accessibility.css">
     <link rel="stylesheet" href="../forum_css/about.css">
-    <link rel="stylesheet" href="../css/signup.css">
-    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../forum_css/signup_login_popup.css">
-    <link rel="stylesheet" href="../css/placeholder.css">
   </head>
   <body class="about-body">
     <!--CSS-only controls-->
@@ -188,7 +184,7 @@
           <p class="login-subtitle">Log in to your training</p>
         </header>
         <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
-        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
           <div class="signup-field">
             <label for="popup-login-email">Email address</label>
             <input id="popup-login-email" type="email" autocomplete="email" placeholder="Enter your email" required>
@@ -196,14 +192,14 @@
           <div class="signup-field">
             <div class="login-password-heading">
               <label for="popup-login-password">Password</label>
-              <a class="forgot-password-link" href="forgot_password.html">Forgot password?</a>
+              <span class="forgot-password-link placeholder-text"  role="link" aria-disabled="true" tabindex="0" title="Page coming soon">Forgot password?</span>
             </div>
             <div class="password-field">
               <input id="popup-login-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password">
               <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
             </div>
           </div>
-          <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+          <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <span  role="link" aria-disabled="true" tabindex="0" title="Page coming soon" class="placeholder-text">Terms of Service</span> and <span  role="link" aria-disabled="true" tabindex="0" title="Page coming soon" class="placeholder-text">Privacy Policy</span>.</p>
           <button class="create-account login-action" type="submit" formaction="signed_in.html" formnovalidate>Log In</button>
           <p class="account-switch login-account-switch">New to EduVibe? <button type="button" popovertarget="auth-signup">Create an account</button></p>
         </form>
@@ -219,7 +215,7 @@
           </div>
         </header>
         <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
-        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
           <div class="signup-field">
             <label for="popup-signup-full-name">Full name <span class="signup-optional">(optional)</span></label>
             <input id="popup-signup-full-name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your full name">
@@ -249,7 +245,7 @@
           </div>
           <div class="signup-agreement">
             <input id="popup-signup-agree-terms" type="checkbox" required>
-            <label for="popup-signup-agree-terms">I agree to EduVibe’s <a href="terms.html">Terms of Service</a> and acknowledge the <a href="privacy.html">Privacy Policy</a>.</label>
+            <label for="popup-signup-agree-terms">I agree to EduVibe’s <span  role="link" aria-disabled="true" tabindex="0" title="Page coming soon" class="placeholder-text">Terms of Service</span> and acknowledge the <span  role="link" aria-disabled="true" tabindex="0" title="Page coming soon" class="placeholder-text">Privacy Policy</span>.</label>
           </div>
           <button class="create-account" type="submit">Create Account</button>
           <p class="account-switch">Already have an account? <button type="button" popovertarget="auth-login">Log in</button></p>

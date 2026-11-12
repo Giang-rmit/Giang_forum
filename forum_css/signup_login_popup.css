@@ -487,3 +487,81 @@ body.login-page {
 .login-page .signup-field input {
   padding-block: 14px;
 }
+
+
+/* ==================================================
+   LOGIN AND SIGNUP POPUP CONTAINERS
+   ================================================== */
+/* Native HTML popovers: no JavaScript required. */
+
+.auth-popup {
+  width: min(660px, calc(100% - 32px));
+  max-height: calc(100svh - 48px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 32px;
+  overflow: auto;
+  background: white;
+  color: var(--navy);
+  box-shadow: 0 24px 80px #0005;
+}
+
+.auth-popup::backdrop {
+  background: #07152d99;
+  backdrop-filter: blur(3px);
+}
+
+.auth-popup .signup-card {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 48px clamp(24px, 6vw, 40px) 32px;
+}
+
+.auth-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #eaf2ff;
+  color: var(--navy);
+  font: 26px Arial, sans-serif;
+  cursor: pointer;
+}
+
+button[popovertarget]:not(.auth-close, .create-account) {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button[popovertarget]:not([class]) {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0959be;
+  font: inherit;
+  text-decoration: underline;
+}
+
+.mobile-links button[popovertarget], .site-footer button[popovertarget] {
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mobile-links button[popovertarget] {
+  font-weight: 700;
+}
+
+.account-switch button[popovertarget] {
+  font-weight: 700;
+}
+
+html:has(.auth-popup:popover-open) {
+  overflow: hidden;
+}
+

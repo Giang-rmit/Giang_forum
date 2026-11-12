@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie settings | EduVibe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Shared account forms, login and signup popups -->
+    <link rel="stylesheet" href="../forum_css/main_forum.css">
+    <link rel="stylesheet" href="../forum_css/More_footer.css">
+    <link rel="stylesheet" href="../forum_css/signup_login_popup.css">
+  </head>
+  <body class="more-body">
+    <!--CSS-only controls-->
+    <input type="checkbox" id="menu-toggle" aria-label="Navigation menu">
+    <input type="checkbox" id="search-toggle" aria-label="Search panel">
+    <!--MOBILE SIDEBAR-->
+    <aside class="mobile-menu">
+      <div class="mobile-profile">
+        <div class="guest-icon">
+          EV
+        </div>
+        <p>Welcome to EduVibe</p>
+      </div>
+      <nav class="mobile-links">
+        <a href="MAIN_forum.html">Home</a>
+        <a href="about_page.html">About</a>
+        <details>
+          <summary>Courses <span aria-hidden="true">▾</span></summary>
+          <div class="mobile-topic-list">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </details>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_forum.html">Forum</a>
+      </nav>
+      <div class="guest-buttons">
+        <button type="button" popovertarget="auth-signup" class="sidebar-signup">Sign up</button>
+        <button type="button" popovertarget="auth-login" class="sidebar-login">Log in</button>
+      </div>
+    </aside>
+    <label for="menu-toggle" class="menu-overlay" aria-label="Close menu"></label>
+    <!--NAVBAR-->
+    <nav class="navbar">
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+      <a href="MAIN_forum.html" class="logo" aria-label="EduVibe homepage"><img class="brand-logo" src="../images/Eduvibe_logo.png" alt="EduVibe"></a>
+      <div class="nav-links">
+        <a href="about_page.html">About</a>
+        <div class="dropdown">
+          <button class="dropdown-title" type="button"> Courses <span>▾</span></button>
+          <div class="dropdown-content">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </div>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_forum.html">Forum</a>
+      </div>
+      <div class="desktop-actions guest-actions">
+        <label for="search-toggle" class="nav-icon search-trigger" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+        <button type="button" popovertarget="auth-login" class="login-button">Log in</button>
+        <button type="button" popovertarget="auth-signup" class="signup-button">Sign up</button>
+      </div>
+      <!--Mobile actions-->
+      <div class="mobile-actions">
+        <label for="search-toggle" class="nav-icon" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--NAV SEARCH-->
+    <form class="search-panel" action="MAIN_forum.html" method="get">
+      <div class="wide-search-box">
+        <input type="search" name="search" placeholder="What do you want to learn today?">
+        <button type="submit" aria-label="Search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </button>
+      </div>
+    </form>
+    <main class="accessibility-page more-page more-layout" id="main-content">
+      <nav class="more-navigation" aria-label="Help and policies">
+        <a href="help.html">Contact</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="cookies.html" aria-current="page">Cookie settings</a>
+        <a href="accessibility_statement.html">Accessibility Statement</a>
+      </nav>
+      <article class="accessibility-card more-document">
+        <header>
+          <h1>Cookie settings</h1>
+        </header>
+      </article>
+    </main>
+    <!--FOOTER-->
+    <footer class="site-footer">
+      <section class="footer-column">
+        <h2>EduVibe</h2>
+        <a href="about_page.html">About</a>
+        <span class="placeholder-text">Courses</span>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_forum.html">Forum</a>
+      </section>
+      <section class="footer-column">
+        <h2>Topics</h2>
+        <span class="placeholder-text">AI &amp; Machine Learning</span>
+        <span class="placeholder-text">Cybersecurity</span>
+        <span class="placeholder-text">Web Development</span>
+        <span class="placeholder-text">Data Science</span>
+        <span class="placeholder-text">Game Development</span>
+        <span class="placeholder-text">Programming &amp; Software Development</span>
+        <span class="placeholder-text">Networking</span>
+        <span class="placeholder-text">Internet of Things (IoT)</span>
+      </section>
+      <section class="footer-column">
+        <h2>More</h2>
+        <a href="help.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="cookies.html">Cookie settings</a>
+        <a href="accessibility_statement.html">Accessibility statement</a>
+      </section>
+    </footer>
+    <div id="auth-login" class="auth-popup login-page" popover aria-label="Log in to EduVibe">
+      <button class="auth-close" type="button" popovertarget="auth-login" popovertargetaction="hide" aria-label="Close login">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-login-signup-heading">
+        <header class="signup-intro">
+          <h2 class="signup-title" id="popup-login-signup-heading">Welcome back</h2>
+          <p class="login-subtitle">Log in to your training</p>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
+          <div class="signup-field">
+            <label for="popup-login-email">Email address</label>
+            <input id="popup-login-email" type="email" autocomplete="email" placeholder="Enter your email" required>
+          </div>
+          <div class="signup-field">
+            <div class="login-password-heading">
+              <label for="popup-login-password">Password</label>
+              <span class="placeholder-text" role="link" aria-disabled="true" tabindex="0" title="Page coming soon">Forgot password?</span>
+            </div>
+            <div class="password-field">
+              <input id="popup-login-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+          <button class="create-account login-action" type="submit" formaction="signed_in.html" formnovalidate>Log In</button>
+          <p class="account-switch login-account-switch">New to EduVibe? <button type="button" popovertarget="auth-signup">Create an account</button></p>
+        </form>
+      </section>
+    </div>
+    <div id="auth-signup" class="auth-popup" popover aria-label="Create your EduVibe account">
+      <button class="auth-close" type="button" popovertarget="auth-signup" popovertargetaction="hide" aria-label="Close signup">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-signup-signup-heading">
+        <header class="signup-intro">
+          <div class="signup-brand-header">
+            <h2 class="signup-title" id="popup-signup-signup-heading">Create Your Account</h2>
+            <p class="signup-brand-slogan">Build skills. Shape your future.</p>
+          </div>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
+          <div class="signup-field">
+            <label for="popup-signup-full-name">Full name <span class="signup-optional">(optional)</span></label>
+            <input id="popup-signup-full-name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your full name">
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-username">Username</label>
+            <input id="popup-signup-username" type="text" autocomplete="username" maxlength="30" placeholder="Choose a username" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-email">Email address</label>
+            <input id="popup-signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-password">Password</label>
+            <div class="password-field">
+              <input id="popup-signup-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="popup-signup-password-help" placeholder="Create a password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+            <small id="popup-signup-password-help">Use at least 8 characters.</small>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-confirm-password">Confirm password</label>
+            <div class="password-field">
+              <input id="popup-signup-confirm-password" type="password" autocomplete="new-password" minlength="8" required placeholder="Enter your password again">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <div class="signup-agreement">
+            <input id="popup-signup-agree-terms" type="checkbox" required>
+            <label for="popup-signup-agree-terms">I agree to EduVibe’s <a href="terms.html">Terms of Service</a> and acknowledge the <a href="privacy.html">Privacy Policy</a>.</label>
+          </div>
+          <button class="create-account" type="submit">Create Account</button>
+          <p class="account-switch">Already have an account? <button type="button" popovertarget="auth-login">Log in</button></p>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

@@ -7,12 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/accessibility.css">
-    <link rel="stylesheet" href="../css/more.css">
     <!-- Shared account forms, login and signup popups -->
-    <link rel="stylesheet" href="../css/account-forms.css">
-    <link rel="stylesheet" href="../css/placeholder.css">
+    <link rel="stylesheet" href="../forum_css/main_forum.css">
+    <link rel="stylesheet" href="../forum_css/More_footer.css">
+    <link rel="stylesheet" href="../forum_css/signup_login_popup.css">
   </head>
   <body class="privacy-page more-body">
     <!--CSS-only controls-->
@@ -27,8 +25,8 @@
         <p>Welcome to EduVibe</p>
       </div>
       <nav class="mobile-links">
-        <a href="MAIN_FORUM_PAGE.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="MAIN_forum.html">Home</a>
+        <a href="about_page.html">About</a>
         <details>
           <summary>Courses <span aria-hidden="true">▾</span></summary>
           <div class="mobile-topic-list">
@@ -43,7 +41,7 @@
           </div>
         </details>
         <span class="placeholder-text">Blog</span>
-        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+        <a href="MAIN_forum.html">Forum</a>
       </nav>
       <div class="guest-buttons">
         <button type="button" popovertarget="auth-signup" class="sidebar-signup">Sign up</button>
@@ -54,9 +52,9 @@
     <!--NAVBAR-->
     <nav class="navbar">
       <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
-      <a href="MAIN_FORUM_PAGE.html" class="logo" aria-label="EduVibe homepage"><img class="brand-logo" src="../images/eduvibe-logo.svg" alt="EduVibe"></a>
+      <a href="MAIN_forum.html" class="logo" aria-label="EduVibe homepage"><img class="brand-logo" src="../images/Eduvibe_logo.png" alt="EduVibe"></a>
       <div class="nav-links">
-        <a href="about.html">About</a>
+        <a href="about_page.html">About</a>
         <div class="dropdown">
           <button class="dropdown-title" type="button"> Courses <span>▾</span></button>
           <div class="dropdown-content">
@@ -71,7 +69,7 @@
           </div>
         </div>
         <span class="placeholder-text">Blog</span>
-        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+        <a href="MAIN_forum.html">Forum</a>
       </div>
       <div class="desktop-actions guest-actions">
         <label for="search-toggle" class="nav-icon search-trigger" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
@@ -98,7 +96,7 @@
       </div>
     </nav>
     <!--NAV SEARCH-->
-    <form class="search-panel" action="MAIN_FORUM_PAGE.html" method="get">
+    <form class="search-panel" action="MAIN_forum.html" method="get">
       <div class="wide-search-box">
         <input type="search" name="search" placeholder="What do you want to learn today?">
         <button type="submit" aria-label="Search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </button>
@@ -111,7 +109,7 @@
         <a href="privacy.html" aria-current="page">Privacy Policy</a>
         <a href="sitemap.html">Sitemap</a>
         <a href="cookies.html">Cookie settings</a>
-        <a href="accessibility.html">Accessibility Statement</a>
+        <a href="accessibility_statement.html">Accessibility Statement</a>
       </nav>
       <article class="accessibility-card more-document">
         <header>
@@ -306,10 +304,10 @@
     <footer class="site-footer">
       <section class="footer-column">
         <h2>EduVibe</h2>
-        <a href="about.html">About</a>
+        <a href="about_page.html">About</a>
         <span class="placeholder-text">Courses</span>
         <span class="placeholder-text">Blog</span>
-        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+        <a href="MAIN_forum.html">Forum</a>
       </section>
       <section class="footer-column">
         <h2>Topics</h2>
@@ -329,7 +327,7 @@
         <a href="privacy.html">Privacy</a>
         <a href="sitemap.html">Sitemap</a>
         <a href="cookies.html">Cookie settings</a>
-        <a href="accessibility.html">Accessibility statement</a>
+        <a href="accessibility_statement.html">Accessibility statement</a>
       </section>
     </footer>
     <div id="auth-login" class="auth-popup login-page" popover aria-label="Log in to EduVibe">
@@ -340,7 +338,7 @@
           <p class="login-subtitle">Log in to your training</p>
         </header>
         <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
-        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
           <div class="signup-field">
             <label for="popup-login-email">Email address</label>
             <input id="popup-login-email" type="email" autocomplete="email" placeholder="Enter your email" required>
@@ -348,7 +346,7 @@
           <div class="signup-field">
             <div class="login-password-heading">
               <label for="popup-login-password">Password</label>
-              <a class="forgot-password-link" href="forgot_password.html">Forgot password?</a>
+              <span class="placeholder-text" role="link" aria-disabled="true" tabindex="0" title="Page coming soon">Forgot password?</span>
             </div>
             <div class="password-field">
               <input id="popup-login-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password">
@@ -356,7 +354,7 @@
             </div>
           </div>
           <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
-          <button class="create-account login-action" type="submit" formnovalidate>Log In</button>
+          <button class="create-account login-action" type="submit" formaction="signed_in.html" formnovalidate>Log In</button>
           <p class="account-switch login-account-switch">New to EduVibe? <button type="button" popovertarget="auth-signup">Create an account</button></p>
         </form>
       </section>
@@ -371,7 +369,7 @@
           </div>
         </header>
         <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
-        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed_in.html" method="get">
           <div class="signup-field">
             <label for="popup-signup-full-name">Full name <span class="signup-optional">(optional)</span></label>
             <input id="popup-signup-full-name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your full name">

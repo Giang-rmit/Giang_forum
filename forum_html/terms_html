@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | EduVibe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/accessibility.css">
+    <link rel="stylesheet" href="../css/terms.css">
+    <link rel="stylesheet" href="../css/more.css">
+    <!-- Shared account forms, login and signup popups -->
+    <link rel="stylesheet" href="../css/account-forms.css">
+    <link rel="stylesheet" href="../css/placeholder.css">
+  </head>
+  <body class="more-body terms-body">
+    <!--CSS-only controls-->
+    <input type="checkbox" id="menu-toggle" aria-label="Navigation menu">
+    <input type="checkbox" id="search-toggle" aria-label="Search panel">
+    <!--MOBILE SIDEBAR-->
+    <aside class="mobile-menu">
+      <div class="mobile-profile">
+        <div class="guest-icon">
+          EV
+        </div>
+        <p>Welcome to EduVibe</p>
+      </div>
+      <nav class="mobile-links">
+        <a href="MAIN_FORUM_PAGE.html">Home</a>
+        <a href="about.html">About</a>
+        <details>
+          <summary>Courses <span aria-hidden="true">▾</span></summary>
+          <div class="mobile-topic-list">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </details>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </nav>
+      <div class="guest-buttons">
+        <button type="button" popovertarget="auth-signup" class="sidebar-signup">Sign up</button>
+        <button type="button" popovertarget="auth-login" class="sidebar-login">Log in</button>
+      </div>
+    </aside>
+    <label for="menu-toggle" class="menu-overlay" aria-label="Close menu"></label>
+    <!--NAVBAR-->
+    <nav class="navbar">
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+      <a href="MAIN_FORUM_PAGE.html" class="logo" aria-label="EduVibe homepage"><img class="brand-logo" src="../images/eduvibe-logo.svg" alt="EduVibe"></a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <button class="dropdown-title" type="button"> Courses <span>▾</span></button>
+          <div class="dropdown-content">
+            <span class="placeholder-text">AI &amp; Machine Learning</span>
+            <span class="placeholder-text">Cybersecurity</span>
+            <span class="placeholder-text">Web Development</span>
+            <span class="placeholder-text">Data Science</span>
+            <span class="placeholder-text">Game Development</span>
+            <span class="placeholder-text">Programming &amp; Software Development</span>
+            <span class="placeholder-text">Networking</span>
+            <span class="placeholder-text">Internet of Things (IoT)</span>
+          </div>
+        </div>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </div>
+      <div class="desktop-actions guest-actions">
+        <label for="search-toggle" class="nav-icon search-trigger" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+        <button type="button" popovertarget="auth-login" class="login-button">Log in</button>
+        <button type="button" popovertarget="auth-signup" class="signup-button">Sign up</button>
+      </div>
+      <!--Mobile actions-->
+      <div class="mobile-actions">
+        <label for="search-toggle" class="nav-icon" aria-label="Open search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </label>
+        <div class="language-menu">
+          <button class="nav-icon" type="button" aria-label="Change language"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="9"></circle> <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse> <path d="M3 12h18M5 6.5h14M5 17.5h14"></path> </svg> </button>
+          <div class="language-options">
+            <span class="placeholder-text">English</span>
+            <span class="placeholder-text">Tiếng Việt</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--NAV SEARCH-->
+    <form class="search-panel" action="MAIN_FORUM_PAGE.html" method="get">
+      <div class="wide-search-box">
+        <input type="search" name="search" placeholder="What do you want to learn today?">
+        <button type="submit" aria-label="Search"> <svg viewBox="0 0 24 24" aria-hidden="true"> <circle cx="11" cy="11" r="6"></circle> <path d="m16 16 5 5"></path> </svg> </button>
+      </div>
+    </form>
+    <main class="accessibility-page terms-page more-layout" id="main-content">
+      <nav class="more-navigation" aria-label="Help and policies">
+        <a href="help.html">Contact</a>
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="cookies.html">Cookie settings</a>
+        <a href="accessibility.html">Accessibility Statement</a>
+      </nav>
+      <article class="accessibility-card terms-card" aria-labelledby="terms-title">
+        <header>
+          <h1 id="terms-title">Terms of Service</h1>
+          <p>Last updated: <time datetime="2026-11-09">November 9, 2026</time></p>
+        </header>
+        <nav class="terms-contents" aria-labelledby="terms-contents-title">
+          <h2 id="terms-contents-title">Table of Content</h2>
+          <ol>
+            <li><a href="#terms-section-1">1. Eligibility and Use of the Platform</a></li>
+            <li><a href="#terms-section-2">2. User Accounts and Registration</a></li>
+            <li><a href="#terms-section-3">3. Online Courses and Learning Materials</a></li>
+            <li><a href="#terms-section-4">4. Course Purchases and Payments</a></li>
+            <li><a href="#terms-section-5">5. Refunds, Cancellations, and Purchase Issues</a></li>
+            <li><a href="#terms-section-6">6. Discussion Forum and Community Participation</a></li>
+            <li><a href="#terms-section-7">7. Blogs and Educational Contributions</a></li>
+            <li><a href="#terms-section-8">8. Course Reviews and Ratings</a></li>
+            <li><a href="#terms-section-9">9. Shopping Cart and Wishlist</a></li>
+            <li><a href="#terms-section-10">10. User-Generated Content and Ownership</a></li>
+            <li><a href="#terms-section-11">11. Prohibited Content and Activities</a></li>
+            <li><a href="#terms-section-12">12. Intellectual Property Rights</a></li>
+            <li><a href="#terms-section-13">13. Content Moderation and Reporting</a></li>
+            <li><a href="#terms-section-14">14. Privacy and Personal Data Protection</a></li>
+            <li><a href="#terms-section-15">15. Account Suspension, Deactivation, and Deletion</a></li>
+            <li><a href="#terms-section-16">16. Platform Security</a></li>
+            <li><a href="#terms-section-17">17. Service Availability and Educational Content</a></li>
+            <li><a href="#terms-section-18">18. Third-Party Content and External Links</a></li>
+            <li><a href="#terms-section-19">19. Limitation of Liability</a></li>
+            <li><a href="#terms-section-20">20. Changes to These Terms</a></li>
+            <li><a href="#terms-section-21">21. Governing Law and Dispute Resolution</a></li>
+            <li><a href="#terms-section-22">22. Contact Information</a></li>
+          </ol>
+        </nav>
+        <p>These Terms of Service (&quot;Terms&quot;) govern your access to and use of EduVibe, an online learning platform that provides technology-related courses, educational resources, and interactive community features.</p>
+        <p>By creating an account, accessing our services, or using EduVibe, you agree to comply with these Terms and our applicable policies. Please read them carefully before using the platform.</p>
+        <p>These Terms should be read together with our <a class="terms-inline-link" href="#terms-section-14" aria-label="Privacy Policy reference: see Privacy and Personal Data Protection">Privacy Policy</a>, <a class="terms-inline-link" href="#terms-section-6" aria-label="Community Guidelines reference: see Discussion Forum and Community Participation">Community Guidelines</a>, and any applicable purchase or refund policies.</p>
+        <section aria-labelledby="terms-section-1">
+          <h2 id="terms-section-1">1. Eligibility and Use of the Platform</h2>
+          <p>EduVibe is designed for individuals who wish to explore, learn, and develop skills in technology-related fields.</p>
+          <p>By using EduVibe, you agree that:</p>
+          <ul>
+            <li>You will provide accurate information when registering an account.</li>
+            <li>You will use the platform for lawful and legitimate purposes.</li>
+            <li>You will comply with these Terms and applicable laws.</li>
+            <li>You will not interfere with the security, functionality, or operation of the platform.</li>
+          </ul>
+          <p>Users who are legally required to obtain parental or guardian consent must do so before accessing features or making purchases that require such consent.</p>
+          <p>EduVibe reserves the right to restrict access to features where necessary to meet applicable legal requirements.</p>
+        </section>
+        <section aria-labelledby="terms-section-2">
+          <h2 id="terms-section-2">2. User Accounts and Registration</h2>
+          <p>Certain EduVibe features require users to create an account.</p>
+          <p>When registering, you must provide a valid email address, a unique username, and the other information requested during registration.</p>
+          <p>You are responsible for:</p>
+          <ul>
+            <li>Maintaining accurate and up-to-date account details.</li>
+            <li>Protecting your password and login credentials.</li>
+            <li>Keeping your account secure.</li>
+            <li>Notifying EduVibe if you become aware of unauthorised access to your account.</li>
+            <li>Avoiding unauthorised sharing or misuse of your account.</li>
+          </ul>
+          <p>Users may update their profile information, change passwords, and manage their account settings through the available account management features.</p>
+          <p>EduVibe may temporarily restrict an account when reasonably necessary to address suspected unauthorised access, security threats, or violations of these Terms.</p>
+        </section>
+        <section aria-labelledby="terms-section-3">
+          <h2 id="terms-section-3">3. Online Courses and Learning Materials</h2>
+          <p>EduVibe provides technology-focused educational content, including courses relating to programming, web development, cybersecurity, artificial intelligence, data science, cloud computing, and other technology subjects.</p>
+          <p>Course descriptions may include information about course content, learning objectives, prices, and other relevant details.</p>
+          <p>EduVibe aims to present course information clearly so users can make informed decisions before purchasing.</p>
+          <p>Educational materials are provided for learning purposes. Completion of a course does not guarantee employment, professional certification, or a particular academic or career outcome unless expressly stated.</p>
+          <p>Course availability and features may vary depending on the course.</p>
+        </section>
+        <section aria-labelledby="terms-section-4">
+          <h2 id="terms-section-4">4. Course Purchases and Payments</h2>
+          <p>EduVibe uses an <strong>individual course purchase model</strong>, rather than a monthly or yearly subscription model.</p>
+          <p>Users may browse courses, add them to a shopping cart, and purchase selected courses through the platform&#39;s checkout process.</p>
+          <p>When purchasing a course:</p>
+          <ul>
+            <li>The course price will be displayed before the purchase is confirmed.</li>
+            <li>Users will have an opportunity to review their order before submission.</li>
+            <li>Applicable fees and purchase conditions will be communicated before checkout.</li>
+            <li>Purchased courses will become available according to the access conditions stated at the time of purchase.</li>
+            <li>A course purchase grants access to educational content; it does not transfer ownership of that content.</li>
+          </ul>
+          <p>Course access conditions, including any expiry dates or restrictions, must be disclosed before purchase.</p>
+          <p><strong>Project demonstration notice:</strong> EduVibe is currently developed as an educational project. Checkout transactions are simulated using test payment information, and <strong class="terms-emphasis">no real payment is collected</strong> through the demonstration.</p>
+        </section>
+        <section aria-labelledby="terms-section-5">
+          <h2 id="terms-section-5">5. Refunds, Cancellations, and Purchase Issues</h2>
+          <p>Users should review the applicable purchase and refund conditions before completing an order.</p>
+          <p>Where a transaction involves a real payment, refund eligibility and procedures will be determined by the disclosed <a class="terms-inline-link" href="#terms-section-5">Refund Policy</a> and applicable consumer protection laws.</p>
+          <p>Users may contact EduVibe support regarding:</p>
+          <ul>
+            <li>Incorrect course purchases.</li>
+            <li>Payment or checkout errors.</li>
+            <li>Problems accessing purchased content.</li>
+            <li>Courses that do not match the description provided.</li>
+            <li>Other purchase-related concerns.</li>
+          </ul>
+          <p>Nothing in these Terms limits mandatory consumer rights provided by applicable law.</p>
+        </section>
+        <section aria-labelledby="terms-section-6">
+          <h2 id="terms-section-6">6. Discussion Forum and Community Participation</h2>
+          <p>EduVibe provides a Discussion Forum where learners can ask questions, exchange ideas, and collaborate on technology-related topics.</p>
+          <p>Registered users may:</p>
+          <ul>
+            <li>Create discussion threads.</li>
+            <li>Reply to existing discussions or posts.</li>
+            <li>Edit their own discussions and replies.</li>
+            <li>Delete their own contributions.</li>
+            <li>Search, sort, and filter discussions.</li>
+            <li>Save discussions for future reference.</li>
+            <li>Report content that may violate community rules.</li>
+          </ul>
+          <p>Users are expected to participate respectfully and constructively.</p>
+          <p>When contributing to discussions, you agree not to post content that is abusive, threatening, discriminatory, misleading, unlawful, or harmful to others.</p>
+          <p>EduVibe may review reported discussions and take appropriate moderation actions.</p>
+          <p>Deleting a discussion or reply removes it from public view. Where necessary and legally permitted, restricted records may be retained for security, moderation, or auditing purposes in accordance with the Privacy Policy.</p>
+        </section>
+        <section aria-labelledby="terms-section-7">
+          <h2 id="terms-section-7">7. Blogs and Educational Contributions</h2>
+          <p>EduVibe allows users to create and share educational articles and blog posts.</p>
+          <p>By publishing a blog post, you agree that:</p>
+          <ul>
+            <li>The content is your original work or you have permission to use it.</li>
+            <li>You will acknowledge third-party materials where appropriate.</li>
+            <li>You will not publish plagiarised or copyright-infringing content.</li>
+            <li>Your content will not contain harmful software, fraudulent links, or unlawful material.</li>
+            <li>You will not intentionally publish false or misleading information.</li>
+          </ul>
+          <p>Users may edit or delete their own blog posts through the available platform features.</p>
+          <p>EduVibe may remove or restrict blog content that violates these Terms, the Community Guidelines, or applicable laws.</p>
+        </section>
+        <section aria-labelledby="terms-section-8">
+          <h2 id="terms-section-8">8. Course Reviews and Ratings</h2>
+          <p>EduVibe allows eligible users to share opinions and experiences through course reviews and ratings.</p>
+          <p>Reviews should be honest, relevant, and based on the user&#39;s genuine experience.</p>
+          <p>Users agree not to:</p>
+          <ul>
+            <li>Submit intentionally false or misleading reviews.</li>
+            <li>Impersonate another reviewer.</li>
+            <li>Post abusive or discriminatory content.</li>
+            <li>Manipulate ratings through fraudulent activity.</li>
+            <li>Use reviews to promote unrelated products or services.</li>
+          </ul>
+          <p>Users may manage their own reviews through the available editing and deletion functions.</p>
+          <p>EduVibe may investigate reported reviews and restrict or remove content that violates platform rules.</p>
+        </section>
+        <section aria-labelledby="terms-section-9">
+          <h2 id="terms-section-9">9. Shopping Cart and Wishlist</h2>
+          <p>EduVibe provides a Shopping Cart and Wishlist to help learners manage courses they are interested in.</p>
+          <p>The Shopping Cart allows users to review selected courses before completing a simulated or supported purchase.</p>
+          <p>The Wishlist allows users to save courses for future consideration.</p>
+          <p>Adding a course to a cart or wishlist does not guarantee its continued availability or reserve its price.</p>
+          <p>Prices and course details may change before purchase, subject to any applicable commitments and legal requirements.</p>
+          <p>Users are responsible for reviewing their order details before confirming a purchase.</p>
+        </section>
+        <section aria-labelledby="terms-section-10">
+          <h2 id="terms-section-10">10. User-Generated Content and Ownership</h2>
+          <p>Users may submit content to EduVibe, including discussion threads, replies, blog posts, reviews, images, and other materials.</p>
+          <p><strong class="terms-emphasis">Users retain ownership of the original content they create</strong>, subject to any applicable third-party rights.</p>
+          <p>By publishing content, users grant EduVibe a non-exclusive, royalty-free permission to store, process, reproduce, and display that content as reasonably necessary to operate the relevant platform features.</p>
+          <p>This permission does not transfer ownership of the content to EduVibe.</p>
+          <p>Users are responsible for ensuring that they have the necessary rights to publish the materials they submit.</p>
+          <p>Content may be restricted or removed where it violates these Terms or applicable law.</p>
+        </section>
+        <section aria-labelledby="terms-section-11">
+          <h2 id="terms-section-11">11. Prohibited Content and Activities</h2>
+          <p>To maintain a safe and supportive learning environment, users must not engage in activities that may harm EduVibe or its community. Prohibited activities include:</p>
+          <ul>
+            <li>Harassment, bullying, discrimination, or threatening behaviour.</li>
+            <li>Sharing another person&#39;s private information without authorisation.</li>
+            <li>Posting spam, fraudulent advertisements, or deceptive links.</li>
+            <li>Uploading viruses, malware, or other harmful software.</li>
+            <li>Attempting to access another user&#39;s account without permission.</li>
+            <li>Impersonating another person or organisation.</li>
+            <li>Circumventing authentication, security controls, or access restrictions without authorisation.</li>
+            <li>Distributing paid course content without permission.</li>
+            <li>Engaging in fraud, copyright infringement, or other unlawful activities.</li>
+            <li>Disrupting the availability or normal operation of the platform.</li>
+          </ul>
+          <p>EduVibe may investigate suspected violations and take proportionate action, including content removal or account restrictions.</p>
+        </section>
+        <section aria-labelledby="terms-section-12">
+          <h2 id="terms-section-12">12. Intellectual Property Rights</h2>
+          <p>EduVibe&#39;s platform design, software, branding, educational materials, graphics, and other protected content may be subject to copyright, trademark, and other intellectual property rights.</p>
+          <p>Unless permission is granted or applicable law permits otherwise, users must not:</p>
+          <ul>
+            <li>Copy or redistribute paid course materials.</li>
+            <li>Resell or commercially exploit course content.</li>
+            <li>Reproduce EduVibe branding without authorisation.</li>
+            <li>Remove copyright notices or ownership information.</li>
+            <li>Present another person&#39;s work as their own.</li>
+          </ul>
+          <p>Purchasing a course provides the purchaser with the applicable right to access and use its educational materials for personal learning purposes.</p>
+          <p>It does not grant ownership of the course or permission to redistribute its contents.</p>
+        </section>
+        <section aria-labelledby="terms-section-13">
+          <h2 id="terms-section-13">13. Content Moderation and Reporting</h2>
+          <p>EduVibe aims to maintain a respectful and trustworthy learning community.</p>
+          <p>Users may report discussions, replies, blog posts, or reviews that appear to violate these Terms or the Community Guidelines.</p>
+          <p>Reported content may be reviewed by authorised administrators.</p>
+          <p>Depending on the circumstances, EduVibe may:</p>
+          <ul>
+            <li>Dismiss reports that do not establish a violation.</li>
+            <li>Hide or remove content that violates platform rules.</li>
+            <li>Restore content where appropriate.</li>
+            <li>Temporarily restrict accounts involved in harmful activities.</li>
+            <li>Lock or unlock accounts following a review.</li>
+          </ul>
+          <p>Moderation decisions should take into account the nature of the violation, user safety, applicable law, and relevant user rights.</p>
+        </section>
+        <section aria-labelledby="terms-section-14">
+          <h2 id="terms-section-14">14. Privacy and Personal Data Protection</h2>
+          <p>EduVibe recognises the importance of protecting users&#39; personal information.</p>
+          <p>Personal data may be processed when users create accounts, purchase courses, participate in discussions, submit reviews, or access other platform features.</p>
+          <p>The information processed may include account details, profile information, course records, learning activity, and user-generated content.</p>
+          <p>Our Privacy Policy explains:</p>
+          <ul>
+            <li>What personal information is collected.</li>
+            <li>Why the information is processed.</li>
+            <li>How information is used and protected.</li>
+            <li>How long information is retained.</li>
+            <li>When information may be shared.</li>
+            <li>How users can exercise applicable privacy and data protection rights.</li>
+          </ul>
+          <p>EduVibe aims to handle personal data in accordance with applicable laws of Vietnam.</p>
+          <p>Users should review the Privacy Policy for further information about data protection.</p>
+        </section>
+        <section aria-labelledby="terms-section-15">
+          <h2 id="terms-section-15">15. Account Suspension, Deactivation, and Deletion</h2>
+          <p>Users may manage their accounts through the available account settings.</p>
+          <p><strong class="terms-emphasis">Users may request account deletion</strong>, subject to applicable legal requirements.</p>
+          <p>Before confirming deletion, EduVibe will explain the consequences of the request, which may include:</p>
+          <ul>
+            <li>Loss of access to purchased courses.</li>
+            <li>Removal of saved courses and wishlist information.</li>
+            <li>Loss of access to learning progress and account features.</li>
+            <li>Removal or anonymisation of personal content where appropriate.</li>
+          </ul>
+          <p>Some records may be retained when necessary and legally permitted, including records required for security, transactions, legal obligations, or auditing.</p>
+          <p>Where applicable, users may request the deletion or correction of personal information in accordance with the Privacy Policy and relevant laws.</p>
+          <p>EduVibe may suspend or restrict accounts that materially violate these Terms, subject to applicable law.</p>
+        </section>
+        <section aria-labelledby="terms-section-16">
+          <h2 id="terms-section-16">16. Platform Security</h2>
+          <p>EduVibe works to provide a secure environment for learning and community participation.</p>
+          <p>Users must not attempt to compromise the platform&#39;s security or access information they are not authorised to view.</p>
+          <p>Users are encouraged to:</p>
+          <ul>
+            <li>Use strong, unique passwords.</li>
+            <li>Keep account credentials confidential.</li>
+            <li>Log out when using shared devices.</li>
+            <li>Report suspicious activity.</li>
+            <li>Avoid opening untrusted links or downloads.</li>
+          </ul>
+          <p>Although reasonable security measures are important, no online service can guarantee absolute protection against every security risk.</p>
+        </section>
+        <section aria-labelledby="terms-section-17">
+          <h2 id="terms-section-17">17. Service Availability and Educational Content</h2>
+          <p>EduVibe aims to provide a reliable learning experience.</p>
+          <p>However, access may occasionally be interrupted due to maintenance, technical problems, network issues, or necessary security measures.</p>
+          <p>EduVibe may update features, improve course content, or change the platform&#39;s interface.</p>
+          <p>Material changes affecting paid course access will be handled consistently with applicable purchase terms and consumer protection obligations.</p>
+          <p>Educational resources and community contributions are intended for general learning purposes and may not always be complete, accurate, or current.</p>
+          <p>Users should independently verify information when making important professional, technical, or financial decisions.</p>
+        </section>
+        <section aria-labelledby="terms-section-18">
+          <h2 id="terms-section-18">18. Third-Party Content and External Links</h2>
+          <p>EduVibe may include links to educational resources or websites operated by third parties.</p>
+          <p>These websites may have their own terms, privacy policies, and security practices.</p>
+          <p>Users should review the policies of external websites before providing personal information or using their services.</p>
+          <p>The inclusion of an external link does not necessarily imply that EduVibe endorses the third-party service.</p>
+          <p>Nothing in this section excludes responsibilities that cannot lawfully be excluded.</p>
+        </section>
+        <section aria-labelledby="terms-section-19">
+          <h2 id="terms-section-19">19. Limitation of Liability</h2>
+          <p>EduVibe aims to provide its services with reasonable care and attention.</p>
+          <p>To the extent permitted by applicable law, EduVibe is not responsible for losses caused solely by circumstances beyond its reasonable control, including certain external service interruptions or unauthorised third-party activities.</p>
+          <p>Nothing in these Terms excludes or restricts liability, remedies, warranties, or consumer rights that cannot legally be excluded or restricted.</p>
+          <p>For a real commercial service, any additional liability limitations must be reviewed for compliance with applicable law.</p>
+        </section>
+        <section aria-labelledby="terms-section-20">
+          <h2 id="terms-section-20">20. Changes to These Terms</h2>
+          <p>EduVibe may revise these Terms to reflect changes in platform features, services, legal obligations, or operational requirements.</p>
+          <p>When material changes occur, users will be informed through appropriate channels.</p>
+          <p>Where legally required, users will be asked to accept updated terms before continuing to use affected services.</p>
+          <p>The latest version of these Terms will be available on EduVibe.</p>
+        </section>
+        <section aria-labelledby="terms-section-21">
+          <h2 id="terms-section-21">21. Governing Law and Dispute Resolution</h2>
+          <p>These Terms are governed by the applicable laws of the Socialist Republic of Vietnam.</p>
+          <p>If users experience problems involving accounts, purchases, content, or other services, they are encouraged to contact EduVibe support.</p>
+          <p>EduVibe aims to address complaints fairly and communicate available remedies.</p>
+          <p>Disputes that cannot be resolved directly may be addressed through legally available procedures or competent authorities in accordance with Vietnamese law.</p>
+          <p>Nothing in these Terms prevents users from exercising rights or seeking remedies provided by applicable law.</p>
+        </section>
+        <section aria-labelledby="terms-section-22">
+          <h2 id="terms-section-22">22. Contact Information</h2>
+          <p>For questions about these Terms, account access, community guidelines, or platform services, users may contact EduVibe through the official Help or Contact page.</p>
+          <p>For privacy-related matters, please refer to our Privacy Policy and its designated contact mechanism.</p>
+          <p>We welcome feedback that helps us improve the quality, safety, accessibility, and reliability of our platform.</p>
+        </section>
+      </article>
+    </main>
+    <!--FOOTER-->
+    <footer class="site-footer">
+      <section class="footer-column">
+        <h2>EduVibe</h2>
+        <a href="about.html">About</a>
+        <span class="placeholder-text">Courses</span>
+        <span class="placeholder-text">Blog</span>
+        <a href="MAIN_FORUM_PAGE.html">Forum</a>
+      </section>
+      <section class="footer-column">
+        <h2>Topics</h2>
+        <span class="placeholder-text">AI &amp; Machine Learning</span>
+        <span class="placeholder-text">Cybersecurity</span>
+        <span class="placeholder-text">Web Development</span>
+        <span class="placeholder-text">Data Science</span>
+        <span class="placeholder-text">Game Development</span>
+        <span class="placeholder-text">Programming &amp; Software Development</span>
+        <span class="placeholder-text">Networking</span>
+        <span class="placeholder-text">Internet of Things (IoT)</span>
+      </section>
+      <section class="footer-column">
+        <h2>More</h2>
+        <a href="help.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="cookies.html">Cookie settings</a>
+        <a href="accessibility.html">Accessibility statement</a>
+      </section>
+    </footer>
+    <div id="auth-login" class="auth-popup login-page" popover aria-label="Log in to EduVibe">
+      <button class="auth-close" type="button" popovertarget="auth-login" popovertargetaction="hide" aria-label="Close login">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-login-signup-heading">
+        <header class="signup-intro">
+          <h2 class="signup-title" id="popup-login-signup-heading">Welcome back</h2>
+          <p class="login-subtitle">Log in to your training</p>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+          <div class="signup-field">
+            <label for="popup-login-email">Email address</label>
+            <input id="popup-login-email" type="email" autocomplete="email" placeholder="Enter your email" required>
+          </div>
+          <div class="signup-field">
+            <div class="login-password-heading">
+              <label for="popup-login-password">Password</label>
+              <a class="forgot-password-link" href="forgot_password.html">Forgot password?</a>
+            </div>
+            <div class="password-field">
+              <input id="popup-login-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Enter your password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <p class="signup-note login-note" id="popup-login-signup-note">By clicking Log in, you accept EduVibe's <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+          <button class="create-account login-action" type="submit" formnovalidate>Log In</button>
+          <p class="account-switch login-account-switch">New to EduVibe? <button type="button" popovertarget="auth-signup">Create an account</button></p>
+        </form>
+      </section>
+    </div>
+    <div id="auth-signup" class="auth-popup" popover aria-label="Create your EduVibe account">
+      <button class="auth-close" type="button" popovertarget="auth-signup" popovertargetaction="hide" aria-label="Close signup">&times;</button>
+      <section class="signup-card" aria-labelledby="popup-signup-signup-heading">
+        <header class="signup-intro">
+          <div class="signup-brand-header">
+            <h2 class="signup-title" id="popup-signup-signup-heading">Create Your Account</h2>
+            <p class="signup-brand-slogan">Build skills. Shape your future.</p>
+          </div>
+        </header>
+        <!--Static preview: validation runs, but credentials are not transmitted. Add named controls and a POST endpoint when the backend is implemented.-->
+        <form class="signup-form" aria-describedby="auth-preview-note" action="signed-in/user_forum.html" method="get">
+          <div class="signup-field">
+            <label for="popup-signup-full-name">Full name <span class="signup-optional">(optional)</span></label>
+            <input id="popup-signup-full-name" type="text" autocomplete="name" maxlength="80" placeholder="Enter your full name">
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-username">Username</label>
+            <input id="popup-signup-username" type="text" autocomplete="username" maxlength="30" placeholder="Choose a username" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-email">Email address</label>
+            <input id="popup-signup-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-password">Password</label>
+            <div class="password-field">
+              <input id="popup-signup-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="popup-signup-password-help" placeholder="Create a password">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+            <small id="popup-signup-password-help">Use at least 8 characters.</small>
+          </div>
+          <div class="signup-field">
+            <label for="popup-signup-confirm-password">Confirm password</label>
+            <div class="password-field">
+              <input id="popup-signup-confirm-password" type="password" autocomplete="new-password" minlength="8" required placeholder="Enter your password again">
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.5 5.2 12 5c6.5 0 10 7 10 7a19 19 0 0 1-4 4M6 6a21 21 0 0 0-4 6s3.5 7 10 7a12 12 0 0 0 5-1M10 10a3 3 0 0 0 4 4"></path></svg>
+            </div>
+          </div>
+          <div class="signup-agreement">
+            <input id="popup-signup-agree-terms" type="checkbox" required>
+            <label for="popup-signup-agree-terms">I agree to EduVibe’s <a href="terms.html">Terms of Service</a> and acknowledge the <a href="privacy.html">Privacy Policy</a>.</label>
+          </div>
+          <button class="create-account" type="submit">Create Account</button>
+          <p class="account-switch">Already have an account? <button type="button" popovertarget="auth-login">Log in</button></p>
+        </form>
+      </section>
+    </div>
+    <p class="visually-hidden" id="auth-preview-note">Static account preview: no account is created and credentials are not sent or stored.</p>
+  </body>
+</html>

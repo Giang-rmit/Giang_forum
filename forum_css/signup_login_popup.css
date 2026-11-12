@@ -502,9 +502,14 @@ body.login-page {
   border: 0;
   border-radius: 32px;
   overflow: auto;
+  scrollbar-width: none;
   background: white;
   color: var(--navy);
   box-shadow: 0 24px 80px #0005;
+}
+
+.auth-popup::-webkit-scrollbar {
+  display: none;
 }
 
 .auth-popup::backdrop {
@@ -559,6 +564,34 @@ button[popovertarget]:not([class]) {
 
 .account-switch button[popovertarget] {
   font-weight: 700;
+}
+
+.auth-popup .account-switch button[popovertarget="auth-signup"],
+.auth-popup .account-switch button[popovertarget="auth-login"] {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #0959be;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.auth-popup .account-switch button[popovertarget="auth-signup"]:hover,
+.auth-popup .account-switch button[popovertarget="auth-login"]:hover {
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+.auth-popup .account-switch button[popovertarget]:focus-visible {
+  outline: 3px solid #0959be;
+  outline-offset: 4px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px white;
 }
 
 html:has(.auth-popup:popover-open) {

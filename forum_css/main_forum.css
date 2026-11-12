@@ -77,6 +77,9 @@ button, input, select, textarea {
   color: var(--white);
   position: relative;
   z-index: 20;
+  margin-bottom: 0;
+  border-bottom: 0;
+  box-shadow: none;
 }
 
 .logo {
@@ -322,6 +325,7 @@ button, input, select, textarea {
 #search-toggle:checked ~ .search-panel {
   max-height: 110px;
   padding: 16px 5%;
+  margin-top: -1px;
 }
 
 .wide-search-box {
@@ -1036,9 +1040,9 @@ body .delete-dialog-actions .delete-confirm-action svg {
     flex-direction: column;
   }
 
-  .mobile-topic-list a {
+  .mobile-topic-list a, .mobile-topic-list > .placeholder-text {
     padding: 8px 0;
-    color: #dce6ff;
+    color: var(--white);
     font-size: 13px;
     text-decoration: none;
   }
@@ -1649,6 +1653,7 @@ body .delete-dialog-actions .delete-confirm-action svg {
 
   .desktop-filters option, .mobile-filter-sheet option, .compose-page option {
     padding: 10px 12px;
+    border-radius: 10px;
     color: var(--navy);
   }
 
@@ -1878,7 +1883,7 @@ body .delete-dialog-actions .delete-confirm-action svg {
     align-items: flex-start;
   }
 
-  .mobile-topic-list a {
+  .mobile-topic-list a, .mobile-topic-list > .placeholder-text {
     max-width: 100%;
     padding: 7px 9px;
     border-radius: 6px;
@@ -1888,10 +1893,16 @@ body .delete-dialog-actions .delete-confirm-action svg {
 /* Slightly larger course links in the mobile navigation. */
 
 @media (max-width: 800px) {
-  .mobile-topic-list a {
+  .mobile-topic-list a, .mobile-topic-list > .placeholder-text {
     font-size: 15px;
     padding: 9px 10px;
     line-height: 1.5;
+  }
+
+  .mobile-topic-list > .placeholder-text:hover,
+  .mobile-topic-list > .placeholder-text:focus-visible {
+    background: var(--selection-yellow);
+    color: var(--navy);
   }
 }
 

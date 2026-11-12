@@ -104,6 +104,10 @@
   font-weight: 700;
 }
 
+.form-field > label > span[aria-hidden="true"] {
+  color: #df202b;
+}
+
 .optional {
   color: #6c6c74;
   font-weight: 400;

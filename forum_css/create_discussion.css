@@ -185,6 +185,13 @@
   border-radius: 10px;
   background: var(--yellow);
   color: var(--navy);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-actions button:hover {
+  background: #f5bd24;
+  border-color: #f5bd24;
+  box-shadow: 0 3px 8px rgb(11 37 89 / 15%);
 }
 
 .form-actions button:disabled {

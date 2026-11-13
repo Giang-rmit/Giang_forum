@@ -2063,7 +2063,9 @@ body .delete-dialog-actions .delete-confirm-action svg {
   color: #e9ecf5;
 }
 
-.account-dropdown a {
+.account-dropdown a,
+.account-dropdown > .account-card-header,
+.account-dropdown .account-menu-items > .placeholder-text {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -2074,31 +2076,43 @@ body .delete-dialog-actions .delete-confirm-action svg {
   font-weight: 600;
 }
 
-.account-dropdown a:hover {
+.account-dropdown a:not(.account-card-header):hover,
+.account-dropdown .account-menu-items > .placeholder-text:hover,
+.account-dropdown .account-language > summary:hover {
   background: #29314b;
+  color: #e9ecf5;
+  text-decoration: none;
 }
 
 .account-dropdown .account-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   padding: 20px;
   border-bottom: 1px solid #49516e;
 }
 
-.account-card-header .account-avatar {
-  width: 50px;
-  height: 50px;
+.account-dropdown .account-card-header .account-avatar {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
   flex-shrink: 0;
 }
 
-.account-card-header .account-avatar svg {
-  width: 46px;
-  height: 46px;
+.account-dropdown .account-card-header .account-avatar svg {
+  width: 50px;
+  height: 50px;
 }
 
 .account-card-header strong {
+  display: block;
+  color: #e9ecf5;
   font-size: 15px;
 }
 
 .account-dropdown .account-card-header small {
+  display: block;
   margin-top: 4px;
   color: #b9c2d8;
   font-size: 12px;
@@ -2108,7 +2122,8 @@ body .delete-dialog-actions .delete-confirm-action svg {
   padding-block: 8px;
 }
 
-.account-dropdown a > svg {
+.account-dropdown a > svg,
+.account-dropdown .account-menu-items > .placeholder-text > svg {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
@@ -2124,7 +2139,8 @@ body .delete-dialog-actions .delete-confirm-action svg {
   padding-block: 18px;
 }
 
-.account-dropdown a:focus-visible {
+.account-dropdown a:focus-visible,
+.account-dropdown .placeholder-text:focus-visible {
   outline: 2px solid var(--yellow);
   outline-offset: -3px;
 }
@@ -2183,12 +2199,27 @@ body .delete-dialog-actions .delete-confirm-action svg {
   }
 
   .account-language-options {
-    padding: 0 12px 8px 42px;
+    display: grid;
+    justify-items: stretch;
+    gap: 0;
+    padding: 0 0 8px;
   }
 
-  .account-language-options a {
-    padding: 10px 12px;
+  .account-dropdown .account-language-options a,
+  .account-dropdown .account-language-options > .placeholder-text {
+    display: block;
+    padding: 10px 20px 10px 42px;
+    border-radius: 0;
+    color: #e9ecf5;
     font-size: 13px;
+    font-weight: 700;
+  }
+
+  .account-dropdown .account-language-options a:hover,
+  .account-dropdown .account-language-options > .placeholder-text:hover {
+    background: #29314b;
+    color: #e9ecf5;
+    text-decoration: none;
   }
 
   .account-language > summary:focus-visible {
@@ -2203,7 +2234,9 @@ body .delete-dialog-actions .delete-confirm-action svg {
   padding-block: 0;
 }
 
-.account-dropdown .account-menu-items > a, .account-dropdown .account-logout {
+.account-dropdown .account-menu-items > a,
+.account-dropdown .account-menu-items > .placeholder-text,
+.account-dropdown .account-logout {
   min-height: 52px;
   padding: 14px 20px;
   box-sizing: border-box;

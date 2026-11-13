@@ -1,0 +1,949 @@
+/* Account photo settings: shared navigation and footer stay in style.css. */
+
+.settings-layout {
+  display: grid;
+  width: min(94%, 1120px);
+  margin: 28px auto 50px;
+  background: white;
+  color: #29334b;
+}
+
+.settings-sidebar {
+  padding-bottom: 36px;
+}
+
+.settings-avatar {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #17171f;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.settings-user strong {
+  font-size: 15px;
+}
+
+.settings-links a {
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.settings-links a:hover {
+  background: #f0f1f7;
+}
+
+.settings-content {
+  min-width: 0;
+}
+
+.settings-heading {
+  padding: 16px 20px 18px;
+  text-align: center;
+  border-bottom: 1px solid #d5d7e3;
+}
+
+.settings-heading h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.settings-heading p {
+  margin: 0;
+  color: #536079;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.photo-form {
+  display: grid;
+  gap: 10px;
+  width: min(88%, 600px);
+  margin: 24px auto 30px;
+}
+
+.photo-form > label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.photo-preview {
+  display: grid;
+  place-items: center;
+  height: 235px;
+  margin-bottom: 8px;
+  padding: 15px;
+  border: 1px solid #dcdde8;
+  background: #f6f7f9;
+  box-shadow: inset 0 0 0 15px white;
+}
+
+.photo-preview svg {
+  width: 210px;
+  max-width: 100%;
+  height: 210px;
+  fill: none;
+  stroke: #747b85;
+  stroke-width: 5;
+}
+
+.photo-upload {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.photo-filename {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #dcdde8;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #626b80;
+}
+
+.photo-upload-label {
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid #9166ff;
+  border-radius: 9px;
+  color: #7130dc;
+  background: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.photo-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.photo-upload:hover .photo-upload-label {
+  background: #f4efff;
+}
+
+.photo-upload:focus-within {
+  outline: 2px solid #7130dc;
+  outline-offset: 3px;
+  border-radius: 5px;
+}
+
+.photo-save {
+  justify-self: start;
+  margin-top: 20px;
+  padding: 11px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #7125d6;
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+.settings-note {
+  margin: 8px 0 0;
+  color: #686873;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.settings-layout a:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: -3px;
+}
+
+@media (max-width: 800px) {
+  .settings-layout {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 18px;
+  }
+
+  .settings-sidebar {
+    padding-bottom: 12px;
+    border-right: 0;
+    border-bottom: 1px solid #d5d7e3;
+  }
+
+  .settings-user {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .settings-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 23px;
+  }
+
+  .settings-links {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 8px;
+  }
+
+  .settings-links a {
+    flex-shrink: 0;
+    padding: 9px 12px;
+  }
+
+  .photo-form {
+    width: 90%;
+  }
+
+  .photo-preview {
+    height: 210px;
+  }
+
+  .photo-preview svg {
+    height: 180px;
+  }
+}
+
+@media (max-width: 380px) {
+  .photo-filename {
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+
+  .photo-upload-label {
+    font-size: 12px;
+    padding-inline: 10px;
+  }
+}
+
+/* Minimal account sidebar inspired by the reference. */
+
+.settings-sidebar {
+  background: white;
+}
+
+.settings-links a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--navy);
+}
+
+.settings-links svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.settings-links .settings-active {
+  background: transparent;
+  color: #07875d;
+  font-weight: 700;
+}
+
+.settings-links .settings-active:hover {
+  background: #edf8f2;
+}
+
+.settings-links .settings-delete:hover {
+  color: #c62828;
+  background: #fff0f1;
+}
+
+@media (max-width: 800px) {
+  .settings-sidebar {
+    padding: 12px 8px;
+  }
+
+  .settings-links {
+    gap: 4px;
+  }
+
+  .settings-links a {
+    gap: 7px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .settings-links svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* Profile identity above the settings navigation. */
+
+.settings-user .account-avatar {
+  width: 120px;
+  height: 120px;
+}
+
+.settings-user .account-avatar svg {
+  width: 110px;
+  height: 110px;
+}
+
+@media (max-width: 800px) {
+  .settings-user .account-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .settings-user .account-avatar svg {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+/* Simple text-only settings links. */
+
+.settings-links a, .settings-links .settings-active {
+  color: #111;
+  font-weight: 700;
+  background: transparent;
+}
+
+.settings-links a:hover, .settings-links .settings-active:hover, .settings-links .settings-delete:hover, .settings-links a:focus-visible {
+  color: #111;
+  background: var(--selection-yellow);
+}
+
+/* Center the sidebar identity and separate it from the settings links. */
+
+.settings-user {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 800px) {
+  .settings-links {
+    justify-content: flex-start;
+  }
+
+  .settings-links a {
+    flex: 1 0 auto;
+  }
+}
+
+/* Borderless settings layout and sidebar. */
+
+.settings-layout {
+  border: 0;
+}
+
+.settings-sidebar {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/* Settings tabs sit above the content at every screen size. */
+
+.settings-user {
+  padding: 20px 12px;
+  margin: 0;
+  border-bottom: 0;
+}
+
+.settings-links .settings-active {
+  border-bottom-color: var(--yellow);
+}
+
+@media (max-width: 480px) {
+  .settings-links {
+    gap: 0;
+    padding-inline: 4px;
+  }
+
+  .settings-links a {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Compact profile summary replaces the centered avatar heading. */
+
+.profile-summary {
+  padding: 24px 20px 16px;
+  border-bottom: 1px solid #e1e4eb;
+}
+
+.profile-summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.profile-summary-photo {
+  flex-shrink: 0;
+}
+
+.profile-summary .account-avatar {
+  width: 76px;
+  height: 76px;
+}
+
+.profile-summary .account-avatar svg {
+  width: 70px;
+  height: 70px;
+}
+
+.profile-summary-details {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.profile-summary-details strong {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile-summary-details span {
+  font-size: 13px;
+}
+
+.profile-summary-details > a {
+  color: #737e92;
+  font-size: 12px;
+  text-underline-offset: 3px;
+}
+
+.profile-photo-tools {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.profile-photo-tools button, .profile-photo-tools a {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: #f7f7f9;
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.profile-photo-tools button {
+  color: #df202b;
+  cursor: not-allowed;
+}
+
+.profile-summary-save {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 8px;
+  border: 1px solid #c9cdd3;
+  border-radius: 6px;
+  background: #e8e8e8;
+  color: #929aa4;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .profile-summary {
+    padding: 18px 14px 14px;
+  }
+
+  .profile-summary-row {
+    gap: 12px;
+  }
+
+  .profile-summary .account-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .profile-summary .account-avatar svg {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+/* Restore a left-hand vertical settings sidebar on desktop and mobile. */
+
+.settings-layout {
+  align-items: start;
+}
+
+.settings-sidebar {
+  align-self: stretch;
+}
+
+.settings-links {
+  overflow: visible;
+}
+
+.settings-links a {
+  border: 0;
+}
+
+.settings-links .settings-active {
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .settings-layout {
+    grid-template-columns: 155px minmax(0, 1fr);
+    width: 96%;
+  }
+
+  .profile-summary {
+    padding: 16px 10px;
+  }
+
+  .profile-summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .profile-summary-details {
+    overflow-wrap: anywhere;
+  }
+
+  .profile-summary-details strong {
+    font-size: 16px;
+  }
+
+  .settings-links {
+    padding: 14px 4px;
+    gap: 8px;
+  }
+
+  .settings-links a {
+    font-size: 13px;
+    padding: 12px 8px;
+  }
+
+  .photo-form {
+    width: 90%;
+  }
+
+  .photo-upload {
+    flex-wrap: wrap;
+  }
+
+  .photo-filename {
+    flex-basis: 100%;
+  }
+}
+
+/* Account fields share the photo settings layout. */
+
+.account-edit-form {
+  display: grid;
+  gap: 20px;
+}
+
+.account-edit-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.account-edit-field label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.account-edit-field label span {
+  color: #686873;
+  font-weight: 400;
+}
+
+.account-edit-field input, .account-edit-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #c9cdd8;
+  border-radius: 6px;
+  color: var(--navy);
+  background: white;
+  font: inherit;
+  font-size: 14px;
+}
+
+.account-edit-field textarea {
+  resize: none;
+}
+
+.account-edit-field :is(input,textarea):focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.account-photo-link {
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.account-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.account-edit-actions a, .account-edit-actions button {
+  padding: 12px 20px;
+  border: 1px solid #c9cdd8;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.account-edit-actions a {
+  background: white;
+  color: var(--navy);
+}
+
+.account-edit-actions button {
+  background: var(--yellow);
+  color: var(--navy);
+  border-color: var(--yellow);
+  cursor: not-allowed;
+}
+
+/* Wide identity card above the sidebar and account content. */
+
+.settings-layout > .profile-summary {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+  padding: 28px 32px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  background: white;
+}
+
+.settings-layout > .profile-summary .profile-summary-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.settings-layout > .profile-summary .account-avatar {
+  width: 112px;
+  height: 112px;
+}
+
+.settings-layout > .profile-summary .account-avatar svg {
+  width: 104px;
+  height: 104px;
+}
+
+.settings-layout > .profile-summary .profile-summary-details {
+  gap: 12px;
+}
+
+.settings-layout > .profile-summary strong {
+  font-size: 28px;
+}
+
+.settings-layout > .profile-summary .profile-summary-details a {
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .settings-layout > .profile-summary {
+    padding: 20px 16px;
+  }
+
+  .settings-layout > .profile-summary .profile-summary-row {
+    gap: 16px;
+  }
+
+  .settings-layout > .profile-summary .account-avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  .settings-layout > .profile-summary .account-avatar svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .settings-layout > .profile-summary strong {
+    font-size: 22px;
+  }
+}
+
+/* Identity card belongs to the right-hand settings column. */
+
+.settings-content > .profile-summary {
+  margin: 0 20px 16px;
+  padding: 20px 24px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  background: white;
+}
+
+.settings-content > .profile-summary .profile-summary-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
+
+.settings-content > .profile-summary .profile-summary-details {
+  gap: 10px;
+}
+
+.settings-content > .profile-summary strong {
+  font-size: 24px;
+}
+
+.settings-sidebar .settings-links {
+  padding-top: 0;
+}
+
+@media (max-width: 800px) {
+  .settings-content > .profile-summary {
+    margin-inline: 8px;
+    padding: 16px 12px;
+  }
+
+  .settings-content > .profile-summary .profile-summary-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .settings-content > .profile-summary strong {
+    font-size: 20px;
+  }
+}
+
+.settings-content > .profile-summary h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Align account fields with the profile summary card edges. */
+
+.account-edit-form {
+  width: auto;
+  margin: 24px 20px 28px;
+}
+
+@media (max-width: 800px) {
+  .account-edit-form {
+    margin-inline: 8px;
+  }
+}
+
+/* Keep the current settings page highlighted like an active forum tab. */
+
+.settings-links .settings-active, .settings-links .settings-active:hover, .settings-links .settings-active:focus-visible {
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* Top settings navigation with a full yellow active tab. */
+
+.settings-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.settings-sidebar {
+  padding: 0 20px;
+}
+
+.settings-links {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e1e5ee;
+  overflow-x: auto;
+}
+
+.settings-links a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.settings-links .settings-active, .settings-links .settings-active:hover, .settings-links .settings-active:focus-visible {
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 800px) {
+  .settings-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .settings-sidebar {
+    padding-inline: 8px;
+  }
+
+  .settings-links {
+    gap: 4px;
+  }
+
+  .settings-links a {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Settings tabs match the forum's active underline and hover. */
+
+.settings-links a {
+  border-bottom: 4px solid transparent;
+}
+
+.settings-links .settings-active, .settings-links .settings-active:focus-visible {
+  background: transparent;
+  border-bottom-color: var(--navy);
+  color: var(--navy);
+}
+
+.settings-links a:hover, .settings-links .settings-active:hover, .settings-links .settings-delete:hover {
+  background: var(--light-blue);
+  color: var(--navy);
+}
+
+.settings-links .settings-active:hover {
+  border-bottom-color: var(--navy);
+}
+
+@media (max-width: 800px) {
+  .settings-links a {
+    border-bottom-width: 3px;
+  }
+}
+
+/* Explicit border restores the active line over earlier border resets. */
+
+.settings-links .settings-active, .settings-links .settings-active:hover, .settings-links .settings-active:focus-visible {
+  border-bottom: 4px solid var(--navy);
+}
+
+@media (max-width: 800px) {
+  .settings-links .settings-active, .settings-links .settings-active:hover, .settings-links .settings-active:focus-visible {
+    border-bottom-width: 3px;
+  }
+}
+
+/* Larger account navigation labels. */
+
+@media (max-width: 800px) {
+  .settings-links a {
+    font-size: 15px;
+  }
+}
+
+.settings-back {
+  grid-column: 1 / -1;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 20px 20px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.settings-back:hover {
+  background: var(--light-blue);
+}
+
+.settings-back span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.settings-back-arrow {
+  width: 30px;
+  height: 18px;
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  flex-shrink: 0;
+}
+
+.profile-panels > .settings-back {
+  margin: 0;
+}
+
+/* Consistent softly rounded action buttons. */
+
+.photo-save, .photo-upload-label, .account-edit-actions a, .account-edit-actions button {
+  border-radius: 6px;
+}
+
+/* Consistent high-visibility keyboard focus for buttons and action links. */
+
+/* More rounded account tab highlights. */
+
+.settings-links a {
+  border-radius: 20px 20px 0 0;
+}
+
+/* More compact account tabs and a slimmer horizontal scrollbar. */
+
+.settings-links {
+  gap: 6px;
+  scrollbar-width: thin;
+}
+
+.settings-links a {
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  .settings-links a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.settings-links::-webkit-scrollbar {
+  height: 5px;
+}
+
+.settings-links::-webkit-scrollbar-thumb {
+  background: #a6acb5;
+  border-radius: 999px;
+}
